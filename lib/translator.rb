@@ -3,25 +3,14 @@ require "yaml"
 # require modules here
 
 def load_library(file)
-  emoticons = YAML.load_file(file)
-  new_hash = {}
-  # code goes here
-  emoticons.each do |key, value|
-    new_hash[key] = {}
-    new_hash[key][:english] = value[0]
-    new_hash[key][:japanese] = value[1]
+  response = {"get_meaning" => {}, "get_emoticon" => {}}
+  library = YAML.load_file(yaml_file)
+  library.each do |trans, emos|
+    response["get_meaning"][emos[1]] = trans
+    response["get_emoticon"][emos[0]] = emos[1]
+  end
+  response
 end
-new_hash
-end
-# def load_library(yaml_file)
-#   response = {"get_meaning" => {}, "get_emoticon" => {}}
-#   library = YAML.load_file(yaml_file)
-#   library.each do |trans, emos|
-#     response["get_meaning"][emos[1]] = trans
-#     response["get_emoticon"][emos[0]] = emos[1]
-#   end
-#   response
-# end
 
 def get_japanese_emoticon(file, emoticon)
 library = load_library(file_path)
