@@ -23,6 +23,7 @@ end
 if emoticon = library[emoticon][:japanese]
   puts "Sorry, that emoticon was not found"
 end
+return
 end
 
 def get_english_meaning(file, emoticon)
