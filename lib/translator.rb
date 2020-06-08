@@ -17,8 +17,9 @@ end
 
   def get_japanese_emoticon(file, emoticon)
   data = load_library(file)
-  result = data[:get_emoticon][emoticon]
-  if result == nil
+if new_hash[key][:english]
+  return new_hash[key][:japanese]
+else
     return "Sorry, that emoticon was not found"
   end
   return result
