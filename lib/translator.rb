@@ -21,7 +21,7 @@ def get_japanese_emoticon(yaml_file, emoticon)
     if emoticon == english
       response = japanese
     end
-  end
+
   if response == nil
     return "Sorry, that emoticon was not found"
   else
