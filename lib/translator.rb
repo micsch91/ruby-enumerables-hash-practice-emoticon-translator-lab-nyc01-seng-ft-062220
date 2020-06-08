@@ -45,7 +45,7 @@ end
 
 # def load_library
 #   # code goes here
-# 
+#
 # def load_library(yaml_file)
 #   response = {"get_meaning" => {}, "get_emoticon" => {}}
 #   library = YAML.load_file(yaml_file)
@@ -55,7 +55,7 @@ end
 #   end
 #   response
 # end
-# 
+#
 # def get_japanese_emoticon
 #   # code goes here
 # def get_japanese_emoticon(yaml_file, emoticon)
@@ -72,10 +72,10 @@ end
 #     return response
 #   end
 # end
-# 
+#
 # def get_english_meaning
 #   # code goes here
-# 
+#
 # def get_english_meaning(yaml_file, emoticon)
 #   library = load_library(yaml_file)
 #   response = nil
@@ -89,4 +89,4 @@ end
 #   else
 #     return response
 #   end
-# end 
+# end
