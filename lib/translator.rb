@@ -23,9 +23,6 @@ end
 #   response
 # end
 
-new_hash
-end
-
 def get_japanese_emoticon(file, emoticon)
 library = load_library(file_path)
 emoticon = library.keys.find do |key|
