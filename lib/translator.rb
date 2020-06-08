@@ -15,24 +15,17 @@ end
 new_hash
 end
 
-  def get_japanese_emoticon(file, emoticon)
-    library = load_library(file)
-    response = nil
-    library["get_emoticon"].each do |english, japanese|
-      if emoticon == english
-        response = japanese
-      end
-    end
-    if response == nil
-      return "Sorry, that emoticon was not found"
-    else
-      return response
-    end
-  end
+def get_japanese_emoticon(file, emoticon)
+library = load_library(file_path)
+emoticon = library.each do |key|
+  library[key][:english] == emoticon
+end
+if emoticon = library[emoticon][:japanese]
+  "Sorry, that emoticon was not found"
+end
 
 def get_english_meaning(file, emoticon)
   load_library(file)
 
-  "Sorry, that emoticon was not found"
   # code goes here
 end
