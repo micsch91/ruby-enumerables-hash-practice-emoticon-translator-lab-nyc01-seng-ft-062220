@@ -15,11 +15,13 @@ end
 new_hash
 end
 
-def get_japanese_emoticon(file, emoticon)
-  load_library(file)
-
-  "Sorry, that emoticon was not found"
-  # code goes here
+  def get_japanese_emoticon(file, emoticon)
+  data = load_library(file)
+  result = data[:get_emoticon][emoticon]
+  if result == nil
+    return "Sorry, that emoticon was not found"
+  end
+  return result
 end
 
 def get_english_meaning(file, emoticon)
