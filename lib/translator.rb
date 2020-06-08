@@ -15,8 +15,8 @@ end
 new_hash
 end
 
-  def get_japanese_emoticon(yaml_file, emoticon)
-    library = load_library(yaml_file)
+  def get_japanese_emoticon(file, emoticon)
+    library = load_library(file)
     response = nil
     library["get_emoticon"].each do |english, japanese|
       if emoticon == english
