@@ -22,7 +22,6 @@ if new_hash[key][:english]
 else
     return "Sorry, that emoticon was not found"
   end
-  return result
 end
 
 def get_english_meaning(file, emoticon)
