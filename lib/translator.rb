@@ -20,7 +20,7 @@ library = load_library(file_path)
 emoticon = library.keys.find do |key|
   library[key][:english] == emoticon
 end
-if emoticon == library[emoticon][:japanese]
+if emoticon = library[emoticon][:japanese]
   "Sorry, that emoticon was not found"
 end
 end
